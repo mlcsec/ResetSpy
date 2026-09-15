@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "resetspy"
+version = "1.0.0"
+description = "User and authentication method enumeration via the Microsoft Self-Service Password Reset (SSPR) portal"
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+keywords = ["microsoft", "azure", "entra", "sspr", "mfa", "security", "enumeration"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Environment :: Console",
+    "Intended Audience :: Information Technology",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Security",
+]
+dependencies = [
+    "requests>=2.31.0",
+    "beautifulsoup4>=4.12.0",
+    "lxml>=5.0.0",
+]
+
+[project.scripts]
+resetspy = "resetspy:main"
+
+[project.urls]
+Repository = "https://github.com/mlcsec/ResetSpy"
+
+[tool.setuptools]
+py-modules = ["resetspy"]
